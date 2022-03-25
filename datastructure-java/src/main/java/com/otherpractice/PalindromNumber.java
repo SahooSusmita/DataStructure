@@ -48,16 +48,14 @@ public class PalindromNumber {
 	public boolean checkPalindromNumber(int number){
 
 		int rev =0;
-		while(number>0){
-			rev = rev*10+number%10;
-			number = number/10;
+		int tmp = number;
+		while(tmp>0){
+			rev = rev*10+tmp%10;
+			tmp = tmp/10;
 
 		}
-		if(number==rev)
-			return true;
-		else
-			return false;
-		
+		return (number==rev);
+			
 	}
 
 
