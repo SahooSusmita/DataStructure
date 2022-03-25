@@ -45,4 +45,20 @@ public class PalindromNumber {
 			System.out.println("Not Palindrom");
 	}
 
+	public boolean checkPalindromNumber(int number){
+
+		int rev =0;
+		while(number>0){
+			rev = rev*10+number%10;
+			number = number/10;
+
+		}
+		if(number==rev)
+			return true;
+		else
+			return false;
+		
+	}
+
+
 }
